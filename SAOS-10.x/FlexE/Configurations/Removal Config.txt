@@ -1,0 +1,12 @@
+no ppm
+no maintenance-domain md1
+no maintenance-domain md2
+no fps fp flexe-fp1
+no fps fp flexe-fp2
+no logical-ports logical-port flexe-lp1
+no logical-ports logical-port flexe-lp2
+no oc-if:interfaces interface flexe-protection-group_ettp1
+no oc-if:interfaces interface flexe-protection-group_ettp2
+no flexe-protection-groups
+no flexe-channels
+no flexe-groups

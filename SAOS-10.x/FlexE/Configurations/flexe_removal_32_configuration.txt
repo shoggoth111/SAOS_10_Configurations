@@ -1,0 +1,132 @@
+no ppm
+no maintenance-domain md1
+no maintenance-domain md2
+no maintenance-domain md3
+no maintenance-domain md4
+no maintenance-domain md5
+no maintenance-domain md6
+no maintenance-domain md7
+no maintenance-domain md8
+no maintenance-domain md9
+no maintenance-domain md10
+no maintenance-domain md11
+no maintenance-domain md12
+no maintenance-domain md13
+no maintenance-domain md14
+no maintenance-domain md15
+no maintenance-domain md16
+no maintenance-domain md17
+no maintenance-domain md18
+no maintenance-domain md19
+no maintenance-domain md20
+no maintenance-domain md21
+no maintenance-domain md22
+no maintenance-domain md23
+no maintenance-domain md24
+no maintenance-domain md25
+no maintenance-domain md26
+no maintenance-domain md27
+no maintenance-domain md28
+no maintenance-domain md29
+no maintenance-domain md30
+no maintenance-domain md31
+no maintenance-domain md32
+no fps fp flexe-fp1
+no logical-ports logical-port flexe-lp1
+no fps fp flexe-fp2
+no logical-ports logical-port flexe-lp2
+no fps fp flexe-fp3
+no logical-ports logical-port flexe-lp3
+no fps fp flexe-fp4
+no logical-ports logical-port flexe-lp4
+no fps fp flexe-fp5
+no logical-ports logical-port flexe-lp5
+no fps fp flexe-fp6
+no logical-ports logical-port flexe-lp6
+no fps fp flexe-fp7
+no logical-ports logical-port flexe-lp7
+no fps fp flexe-fp8
+no logical-ports logical-port flexe-lp8
+no fps fp flexe-fp9
+no logical-ports logical-port flexe-lp9
+no fps fp flexe-fp10
+no logical-ports logical-port flexe-lp10
+no fps fp flexe-fp11
+no logical-ports logical-port flexe-lp11
+no fps fp flexe-fp12
+no logical-ports logical-port flexe-lp12
+no fps fp flexe-fp13
+no logical-ports logical-port flexe-lp13
+no fps fp flexe-fp14
+no logical-ports logical-port flexe-lp14
+no fps fp flexe-fp15
+no logical-ports logical-port flexe-lp15
+no fps fp flexe-fp16
+no logical-ports logical-port flexe-lp16
+no fps fp flexe-fp17
+no logical-ports logical-port flexe-lp17
+no fps fp flexe-fp18
+no logical-ports logical-port flexe-lp18
+no fps fp flexe-fp19
+no logical-ports logical-port flexe-lp19
+no fps fp flexe-fp20
+no logical-ports logical-port flexe-lp20
+no fps fp flexe-fp21
+no logical-ports logical-port flexe-lp21
+no fps fp flexe-fp22
+no logical-ports logical-port flexe-lp22
+no fps fp flexe-fp23
+no logical-ports logical-port flexe-lp23
+no fps fp flexe-fp24
+no logical-ports logical-port flexe-lp24
+no fps fp flexe-fp25
+no logical-ports logical-port flexe-lp25
+no fps fp flexe-fp26
+no logical-ports logical-port flexe-lp26
+no fps fp flexe-fp27
+no logical-ports logical-port flexe-lp27
+no fps fp flexe-fp28
+no logical-ports logical-port flexe-lp28
+no fps fp flexe-fp29
+no logical-ports logical-port flexe-lp29
+no fps fp flexe-fp30
+no logical-ports logical-port flexe-lp30
+no fps fp flexe-fp31
+no logical-ports logical-port flexe-lp31
+no fps fp flexe-fp32
+no logical-ports logical-port flexe-lp32
+no oc-if:interfaces interface flexe-protection-group_ettp1
+no oc-if:interfaces interface flexe-protection-group_ettp2
+no oc-if:interfaces interface flexe-protection-group_ettp3
+no oc-if:interfaces interface flexe-protection-group_ettp4
+no oc-if:interfaces interface flexe-protection-group_ettp5
+no oc-if:interfaces interface flexe-protection-group_ettp6
+no oc-if:interfaces interface flexe-protection-group_ettp7
+no oc-if:interfaces interface flexe-protection-group_ettp8
+no oc-if:interfaces interface flexe-protection-group_ettp9
+no oc-if:interfaces interface flexe-protection-group_ettp10
+no oc-if:interfaces interface flexe-protection-group_ettp11
+no oc-if:interfaces interface flexe-protection-group_ettp12
+no oc-if:interfaces interface flexe-protection-group_ettp13
+no oc-if:interfaces interface flexe-protection-group_ettp14
+no oc-if:interfaces interface flexe-protection-group_ettp15
+no oc-if:interfaces interface flexe-protection-group_ettp16
+no oc-if:interfaces interface flexe-protection-group_ettp17
+no oc-if:interfaces interface flexe-protection-group_ettp18
+no oc-if:interfaces interface flexe-protection-group_ettp19
+no oc-if:interfaces interface flexe-protection-group_ettp20
+no oc-if:interfaces interface flexe-protection-group_ettp21
+no oc-if:interfaces interface flexe-protection-group_ettp22
+no oc-if:interfaces interface flexe-protection-group_ettp23
+no oc-if:interfaces interface flexe-protection-group_ettp24
+no oc-if:interfaces interface flexe-protection-group_ettp25
+no oc-if:interfaces interface flexe-protection-group_ettp26
+no oc-if:interfaces interface flexe-protection-group_ettp27
+no oc-if:interfaces interface flexe-protection-group_ettp28
+no oc-if:interfaces interface flexe-protection-group_ettp29
+no oc-if:interfaces interface flexe-protection-group_ettp30
+no oc-if:interfaces interface flexe-protection-group_ettp31
+no oc-if:interfaces interface flexe-protection-group_ettp32
+no flexe-protection-groups
+no flexe-channels
+no flexe-groups

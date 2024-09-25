@@ -1,0 +1,50 @@
+no ppm
+no maintenance-domain md1
+no maintenance-domain md2
+no maintenance-domain md3
+no maintenance-domain md4
+no maintenance-domain md5
+no maintenance-domain md6
+no maintenance-domain md7
+no maintenance-domain md8
+no maintenance-domain md9
+no maintenance-domain md10
+no fps fp flexe-fp1
+no logical-ports logical-port flexe-lp1
+no fps fp flexe-fp2
+no logical-ports logical-port flexe-lp2
+no fps fp flexe-fp3
+no logical-ports logical-port flexe-lp3
+no fps fp flexe-fp4
+no logical-ports logical-port flexe-lp4
+no fps fp flexe-fp5
+no logical-ports logical-port flexe-lp5
+no fps fp flexe-fp6
+no logical-ports logical-port flexe-lp6
+no fps fp flexe-fp7
+no logical-ports logical-port flexe-lp7
+no fps fp flexe-fp8
+no logical-ports logical-port flexe-lp8
+no fps fp flexe-fp9
+no logical-ports logical-port flexe-lp9
+no fps fp flexe-fp10
+no logical-ports logical-port flexe-lp10
+no oc-if:interfaces interface flexe-protection-group_ettp1
+no oc-if:interfaces interface flexe-protection-group_ettp2
+no oc-if:interfaces interface flexe-protection-group_ettp3
+no oc-if:interfaces interface flexe-protection-group_ettp4
+no oc-if:interfaces interface flexe-protection-group_ettp5
+no oc-if:interfaces interface flexe-protection-group_ettp6
+no oc-if:interfaces interface flexe-protection-group_ettp7
+no oc-if:interfaces interface flexe-protection-group_ettp8
+no oc-if:interfaces interface flexe-protection-group_ettp9
+no oc-if:interfaces interface flexe-protection-group_ettp10
+no flexe-protection-groups
+no flexe-channels
+no flexe-groups
+no flexe-bas-oams
+no flexe-ports
+no flexe-protection-profiles
+no fps
+no fds
+no classifiers

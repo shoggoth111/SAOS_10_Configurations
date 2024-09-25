@@ -1,0 +1,217 @@
+classifiers classifier untagged filter-entry 'classifier:vtag-stack' untagged-exclude-priority-tagged true
+classifiers classifier any filter-entry vtag-stack vtags 1
+exit
+exit
+exit
+exit
+fds fd fd_any1 mode vpws mac-learning disabled
+fds fd fd_any2 mode vpws mac-learning disabled
+no fps fp remote-fp1
+logical-ports logical-port 1 binding 1
+logical-ports logical-port 1 mtu 9800
+fps fp fp1
+fd-name fd_any1
+stats-collection on
+logical-port 1
+classifier-list any untagged
+exit
+exit
+no fps fp remote-fp2
+logical-ports logical-port 2 binding 2
+logical-ports logical-port 2 mtu 9800
+fps fp fp2
+fd-name fd_any2
+stats-collection on
+logical-port 2
+classifier-list any untagged
+exit
+exit
+no fps fp remote-fp33
+no logical-ports logical-port 33 binding
+no oc-if:interfaces interface 33 config ptp-id
+flexe-ports flexe-port flexe-nni-33 ptp-id 33 port-speed 200Gb
+no fps fp remote-fp34
+no logical-ports logical-port 34 binding
+no oc-if:interfaces interface 34 config ptp-id
+flexe-ports flexe-port flexe-nni-34 ptp-id 34 port-speed 200Gb
+flexe-groups flexe-group flex_1
+group-number 1
+calendar-slot-granularity slot-5G
+phy-type flexe-phy-200GBASE-R
+flexe-phys 1 local-interface flexe-nni-33
+exit
+exit
+flexe-groups flexe-group flex_2
+group-number 2
+calendar-slot-granularity slot-5G
+phy-type flexe-phy-200GBASE-R
+flexe-phys 1 local-interface flexe-nni-34
+exit
+exit
+flexe-bas-oams flexe-bas-oam prot_1
+exit
+exit
+flexe-bas-oams flexe-bas-oam work_1
+exit
+exit
+flexe-bas-oams flexe-bas-oam prot_2
+exit
+exit
+flexe-bas-oams flexe-bas-oam work_2
+exit
+exit
+flexe-protection-profiles flexe-protection-profile profile1
+exit
+exit
+flexe-channels flexe-channel channel-work-1
+bas-oam work_1
+channel-number 601
+group-name flex_1
+channel-mapping L2-mapped
+calendar-A-slots-list 1 5
+exit
+calendar-A-slots-list 1 6
+exit
+calendar-B-slots-list 1 5
+exit
+calendar-B-slots-list 1 6
+exit
+exit
+exit
+flexe-channels flexe-channel channel-prot-1
+bas-oam prot_1
+channel-number 602
+group-name flex_2
+channel-mapping L2-mapped
+calendar-A-slots-list 1 7
+exit
+calendar-A-slots-list 1 8
+exit
+calendar-B-slots-list 1 7
+exit
+calendar-B-slots-list 1 8
+exit
+exit
+exit
+flexe-protection-groups flexe-protection-group flexe_protection_group1 working-channel channel-work-1 protection-channel channel-prot-1 protection-profile "profile1"
+oc-if:interfaces interface 'flexe-protection-group_ettp1' config name flexe-protection-group_ettp1 ettp-mode flexe-mac flexe-protection-group "flexe_protection_group1" type ettp
+logical-ports logical-port flexe-lp1 binding flexe-protection-group_ettp1
+logical-ports logical-port flexe-lp1 mtu 9800
+fps fp flexe-fp1
+fd-name fd_any1
+stats-collection on
+logical-port flexe-lp1
+classifier-list any untagged
+exit
+exit
+flexe-channels flexe-channel channel-work-2
+bas-oam work_2
+channel-number 603
+group-name flex_1
+channel-mapping L2-mapped
+calendar-A-slots-list 1 9
+exit
+calendar-A-slots-list 1 10
+exit
+calendar-B-slots-list 1 9
+exit
+calendar-B-slots-list 1 10
+exit
+exit
+exit
+flexe-channels flexe-channel channel-prot-2
+bas-oam prot_2
+channel-number 604
+group-name flex_2
+channel-mapping L2-mapped
+calendar-A-slots-list 1 11
+exit
+calendar-A-slots-list 1 12
+exit
+calendar-B-slots-list 1 11
+exit
+calendar-B-slots-list 1 12
+exit
+exit
+exit
+flexe-protection-groups flexe-protection-group flexe_protection_group2 working-channel channel-work-2 protection-channel channel-prot-2 protection-profile "profile1"
+oc-if:interfaces interface 'flexe-protection-group_ettp2' config name flexe-protection-group_ettp2 ettp-mode flexe-mac flexe-protection-group "flexe_protection_group2" type ettp
+logical-ports logical-port flexe-lp2 binding flexe-protection-group_ettp2
+logical-ports logical-port flexe-lp2 mtu 9800
+fps fp flexe-fp2
+fd-name fd_any2
+stats-collection on
+logical-port flexe-lp2
+classifier-list any untagged
+exit
+exit
+cfm-global-config admin-state enable
+maintenance-domain md1
+name-type character-string
+name md1
+md-level 7
+mhf-creation none
+id-permission none
+exit
+maintenance-domain md1
+maintenance-association ma1
+name-type character-string
+name flexe_protection_group1_port1
+ccm-interval 10ms
+component-list 1 fd-name fd_any1
+exit
+exit
+maintenance-domain md1
+maintenance-association ma1
+maintenance-association-end-point 1
+direction up
+interface fp1
+administrative-state true
+ccm-ltm-priority 1
+continuity-check
+cci-enabled true lowest-fault-priority-defect remote-mac-error
+exit
+exit
+exit
+exit
+maintenance-domain md2
+name-type character-string
+name md2
+md-level 7
+mhf-creation none
+id-permission none
+exit
+maintenance-domain md2
+maintenance-association ma2
+name-type character-string
+name flexe_protection_group2_port2
+ccm-interval 10ms
+component-list 1 fd-name fd_any2
+exit
+exit
+maintenance-domain md2
+maintenance-association ma2
+maintenance-association-end-point 1
+direction up
+interface fp2
+administrative-state true
+ccm-ltm-priority 1
+continuity-check
+cci-enabled true lowest-fault-priority-defect remote-mac-error
+exit
+exit
+exit
+exit
+ppm config global-state admin-status enable
+ppm config action-group ccmag type fault 1 action ccm-stop
+ppm config action-group ccmag type recovery 1 action ccm-resume
+ppm config action-group portag type fault 1 action shut
+ppm config action-group portag type recovery 1 action unshut
+ppm config instance-group clientig1 ppm-instance source cfm-instance md1 ma1 1 action-group ccmag
+ppm config instance-group clientig1 ppm-instance destination logical-port-instance 1 action-group portag
+ppm config instance-group clientig1 direction bidirectional
+ppm config instance-group clientig1 state enable
+ppm config instance-group clientig2 ppm-instance source cfm-instance md2 ma2 2 action-group ccmag
+ppm config instance-group clientig2 ppm-instance destination logical-port-instance 2 action-group portag
+ppm config instance-group clientig2 direction bidirectional
+ppm config instance-group clientig2 state enable

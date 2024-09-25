@@ -1,0 +1,37 @@
+#!/usr/bin/expect -f
+
+
+
+# Start the Python script
+spawn python3 FlexE_Configurator.py
+
+# Define the expected prompts and corresponding responses
+expect "What FlexE device are you configuring? (5130, 5164, 5166, 5184): "
+send "5130\r"
+
+expect "Enter the number of client ports (1-10): "
+send "10\r"
+
+expect "Enter the number of FlexE ports to configure (1-2): "
+send "2\r"
+
+expect "Enter FlexE port 1 (valid ports for 5164 are \[33, 34, 35, 36\]): "
+send "13\r"
+
+expect "Enter FlexE port 2 (valid ports for 5164 are \[33, 34, 35, 36\]): "
+send "14\r"
+
+expect "Do you plan on using FlexE protection? (yes/no): "
+send "yes\r"
+
+expect "Enter the number of clients to be protected (1-20): "
+send "10\r"
+
+expect "Enter protection port 1 (valid ports are \[33, 34, 35, 36\]): "
+send "13\r"
+
+expect "Enter protection port 2 (valid ports are \[33, 34, 35, 36\]): "
+send "14\r"
+
+# Wait for the script to finish
+expect eof
